@@ -1,0 +1,46 @@
+{
+  "name": "sailsAngularElectron",
+  "main": "app.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/candidosales/sails-angular-electron",
+  "authors": [
+    "Cândido Sales Gomes"
+  ],
+  "description": "Basic cross platform desktop application built with SailsJS, AngularJS and Electron",
+  "keywords": [
+    "sails",
+    "angular",
+    "electron"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sails": "~1.1.3",
+    "bootstrap-sass-official": "^3.2.0",
+    "extras.angular.plus": "~0.9.3",
+    "lodash": "~4.11.1",
+    "moment": "~2.10.6",
+    "restangular": "~1.5.2",
+    "satellizer": "~0.12.5"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.5"
+  },
+  "appPath": "app/client",
+  "moduleName": "sailsAngularElectronApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<md-toolbar class="header" layout="row">
+  <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
+    <md-icon class="material-design" >menu</md-icon>
+  </md-button>
+  <h1>ServeJá</h1>  
+</md-toolbar>
+<div flex class="container" layout="row" >
+  <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+    <md-list>
+      <md-list-item class="md-2-line"  ui-sref="home.clients" ui-sref-active="active">
+        <md-icon class="material-icons">person</md-icon>
+        <div class="md-list-item-text">
+          <span>Clientes</span>
+        </div>
+      </md-list-item>
+      <md-list-item class="md-2-line" ui-sref="home.addresses" ui-sref-active="active">
+        <md-icon class="material-icons">place</md-icon>
+        <div class="md-list-item-text">
+          <span>Endereços</span>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+  
+  <md-content id="content" layout-padding flex >
+    <div ui-view></div>
+  </md-content>  
+</div>

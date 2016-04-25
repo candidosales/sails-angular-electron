@@ -1,0 +1,38 @@
+<md-content>
+    <h3 class="md-subhead">{{title.form}}</h3>
+    <form name="clientForm" ng-submit="submit(client)">
+        <div layout="row">
+            <md-input-container class="md-block" flex="50">
+                <label>Nome</label>
+                <input type="text" name="name" ng-model="client.name" required />
+                <div ng-messages="clientForm.name.$error">
+                    <div ng-message="required">O nome é obrigatório.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="50">
+                <label>E-mail</label>
+                <input type="email" name="email" ng-model="client.email" />
+                <div ng-messages="clientForm.email.$error">
+                    <div ng-message-exp="['pattern']">
+                        Deve ser um e-mail válido.
+                    </div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <div layout-gt-sm="column" flex="50">
+                <h3>Telefone</h3>
+                <md-input-container ng-repeat="tel in tels" class="md-block">
+                    <input type="text" name="tel" ng-model="tel.value" />
+                </md-input-container>
+                <md-button md-no-ink class="md-primary" ng-click="addTel()" aria-label="add-tel">
+                    Adicionar telefone
+                </md-button>
+            </div>
+            <div layout-gt-sm="column" flex="50">
+            </div>
+        </div>
+        <input type="hidden" name="id" ng-model="client.id" />
+       <md-button type="submit" class="md-primary md-raised">{{title.button}}</md-button>
+    </form>
+</md-content>

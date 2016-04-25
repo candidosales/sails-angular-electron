@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server loading</title>
+        <link rel="stylesheet" href="stylesheets/loading.css">
+        <!-- build:js(app/client) scripts/main.js -->
+        <script src="js/rendered-process.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body id="loadingPage">
+        <div id="loading">
+            <div id="loadingServer">
+                <span class="preloader" title="loading Rest Api"></span> <span class="preloader-text">Inicializando Servidor</span>
+            </div>
+            <div id="nodejsInstall">
+                <h1>
+                    <img src="images/preloader.gif" width="25" height="25" alt="loading Rest Api">
+                    <br><br>
+                    Para executar a aplicação você deve instalar o <a href="https://nodejs.org/en/">nodejs</a> primeiro.
+                </h1>
+            </div>
+        </div>
+    </body>
+</html>

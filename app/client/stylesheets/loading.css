@@ -1,0 +1,64 @@
+/* line 11, main.scss */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* line 18, main.scss */
+body {
+  padding-top: 75px;
+}
+
+/* line 23, main.scss */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/* line 28, main.scss */
+body#loadingPage {
+  padding-top: 0;
+}
+/* line 30, main.scss */
+body#loadingPage #loading {
+  z-index: 99998;
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+}
+/* line 36, main.scss */
+body#loadingPage #loading #nodejsInstall {
+  display: none;
+}
+/* line 39, main.scss */
+body#loadingPage #loading #nodejsInstall > h1 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+/* line 47, main.scss */
+body#loadingPage #loading #nodejsInstall > h1 img {
+  margin-top: -6px;
+}
+/* line 50, main.scss */
+body#loadingPage #loading .preloader-text {
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+/* line 55, main.scss */
+body#loadingPage #loading .preloader {
+  background: url("../images/preloader.gif") 0 0 no-repeat;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin: 0px 0 -5px 0;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,34 @@
+<html ng-app="App" ng-cloak lang="en" >
+<head>
+  <title>Desktop Web App</title>
+  <!--<base href="/">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../node_modules/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <script src="javascripts/rendered-process.js"></script>
+
+</head>
+<body layout="column">
+  <div ui-view layout="column" flex></div>
+  
+  <!-- build:js javascripts/core.js -->
+  <script src="../../node_modules/angular/angular.min.js"></script>
+  <script src="../../node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="../../node_modules/angular-aria/angular-aria.min.js"></script>
+  <script src="../../node_modules/angular-messages/angular-messages.min.js"></script>
+  <script src="../../node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+  <script src="../../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="../../node_modules/angular-material/angular-material.min.js"></script>
+  <script src="../../node_modules/angucomplete-alt/dist/angucomplete-alt.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js javascripts/main.js -->
+  <script src="javascripts/app.js"></script>
+  <script src="javascripts/services.js"></script>
+  <script src="javascripts/controllers.js"></script>
+  <!-- endbuild -->
+  
+</body>
+</html>

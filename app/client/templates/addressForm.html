@@ -1,0 +1,62 @@
+<md-content ng-show="address">
+    <h3 class="md-subhead">{{title.form}}</h3>
+    <form name="addressForm" ng-submit="submit(address)">
+        <div layout="row">
+            <md-input-container class="md-block" flex="80">
+                <label>Endereço</label>
+                <input type="text" name="address" ng-model="address.address" required />
+                <div ng-messages="addressForm.address.$error">
+                    <div ng-message="required">O endereço é obrigatório.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex="20">
+                <label>N°</label>
+                <input type="number" name="number" ng-model="address.number" required />
+                <div ng-messages="addressForm.number.$error">
+                    <div ng-message="required">O número é obrigatório.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Bairro</label>
+                <md-select name="neighborhood" ng-model="address.neighborhood.id" required >
+                    <md-option ng-repeat="neighborhood in neighborhoods" value="{{neighborhood.id}}">
+                        {{neighborhood.name}}
+                    </md-option>
+                </md-select>
+                <div ng-messages="addressForm.neighborhood.$error">
+                    <div ng-message="required">O bairro é obrigatório.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>CEP</label>
+                <input type="text" name="cep" ng-model="address.cep" />
+            </md-input-container>
+        </div>
+        <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Cidade</label>
+                <input type="text" name="city" ng-model="address.city" required disabled />
+                <div ng-messages="addressForm.city.$error">
+                    <div ng-message="required">A cidade é obrigatória.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Estado</label>
+                <input type="text" name="state" ng-model="address.state" required disabled />
+                <div ng-messages="addressForm.state.$error">
+                    <div ng-message="required">O estado é obrigatório.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <md-input-container class="md-block">
+          <label>Complemento</label>
+          <textarea name="complement" ng-model="address.complement" md-maxlength="150" rows="5" md-select-on-focus ></textarea>
+        </md-input-container>
+        <input type="hidden" name="client" ng-model="address.client" />
+        <input type="hidden" name="id" ng-model="address.id" />
+
+       <md-button type="submit" class="md-primary md-raised">{{title.button}}</md-button>
+    </form>
+</md-content>
