@@ -139,6 +139,16 @@ app.controller('ClientCtrl', ['$scope', '$stateParams', '$state', 'clientService
     $scope.client = clientService.get({ id: $stateParams.idClient });
     $scope.addresses = addressService.getAllByClient({ id: $stateParams.idClient });
   }
+  
+  $scope.showToast = function(args) {
+    var text = args.text;
+    $mdToast.show(
+      $mdToast.simple()
+        .textContent(text)
+        .position('top right')
+        .hideDelay(3000)
+    );
+  };
 
 }]);
 

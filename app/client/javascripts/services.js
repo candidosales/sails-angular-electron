@@ -1,3 +1,5 @@
+var URL = 'http://localhost:1337'
+
 app.service('clientService', ['$q','$http', function($q, $http) {
   var clients = [
     {
@@ -22,7 +24,12 @@ app.service('clientService', ['$q','$http', function($q, $http) {
   ];
   
   function loadAll() {
-    return $q.when(clients);
+     return $q.when(clients);
+    // var request = $http({
+    //                 method: 'get',
+    //                 url: URL + '/clients/',
+    //             });
+    // return( request.then( handleSuccess, handleError ) );
   }
   
   function getAddresses(id) {
@@ -65,7 +72,14 @@ app.service('clientService', ['$q','$http', function($q, $http) {
   }
   
   function create(args) {
-    
+    console.log('create', args);
+    args = args.client;
+    var request = $http({
+                    method: 'post',
+                    url: URL + '/clients/',
+                    data: args 
+                });
+    return( request.then( handleSuccess, handleError ) );
   }
   
   function update(args) {

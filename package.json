@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/candidosales/sails-angular-electron#readme",
   "devDependencies": {
-    "electron-packager": "^5.0.1",
-    "electron-prebuilt": "^0.37.5",
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^0.37.7",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-autoprefixer": "^2.0.0",
